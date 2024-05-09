@@ -46,11 +46,11 @@ public class Veichle : MonoBehaviour
 
         if (Mathf.Abs(localVelocity.normalized.x) > 0.5f)
         {
-            driftParticles.GetComponent<ParticleSystem>().Play();
+            driftParticles.SetActive(true);
         }
         else
         {
-            driftParticles.GetComponent<ParticleSystem>().Pause();
+            driftParticles.SetActive(false);
         }
 
         isAccelerating = false;
